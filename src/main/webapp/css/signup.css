@@ -7,10 +7,11 @@ html, body {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
     background-image: url("../img/aus-doors.png");
-    background-position: center;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
