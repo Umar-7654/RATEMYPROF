@@ -228,3 +228,28 @@ nav { background-color: #665e53; padding: 10px 20px; }
 .navbar-brand { color: #cabaa3; font-weight: bold; font-size: 1.3rem; }
 .navbar-brand:hover { color: #f7efe3; }
 .navbar-toggler { border-color: #cabaa3; }
+
+
+
+#professor-tags-section {
+    margin-top: 20px;
+}
+
+#top-tags-title {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.prof-tag {
+    display: inline-block;
+    background-color: #67111b;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 0.9rem;
+}

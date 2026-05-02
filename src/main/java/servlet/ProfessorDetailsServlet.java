@@ -169,6 +169,49 @@ public class ProfessorDetailsServlet extends HttpServlet {
             result.set("breakdown", breakdown);
             result.set("reviews", reviewsArray);
 
+            
+            ArrayNode topTagsArray = mapper.createArrayNode();
+
+            StringBuilder tagSql = new StringBuilder();
+
+            tagSql.append("SELECT tag, COUNT(*) AS tag_count FROM (");
+
+            tagSql.append("SELECT tag1 AS tag FROM reviews ");
+            tagSql.append("WHERE professor_id = '").append(professorId).append("' ");
+            tagSql.append("AND tag1 IS NOT NULL AND tag1 <> '' ");
+
+            tagSql.append("UNION ALL ");
+
+            tagSql.append("SELECT tag2 AS tag FROM reviews ");
+            tagSql.append("WHERE professor_id = '").append(professorId).append("' ");
+            tagSql.append("AND tag2 IS NOT NULL AND tag2 <> '' ");
+
+            tagSql.append("UNION ALL ");
+
+            tagSql.append("SELECT tag3 AS tag FROM reviews ");
+            tagSql.append("WHERE professor_id = '").append(professorId).append("' ");
+            tagSql.append("AND tag3 IS NOT NULL AND tag3 <> '' ");
+
+            tagSql.append(") all_tags ");
+            tagSql.append("GROUP BY tag ");
+            tagSql.append("ORDER BY tag_count DESC ");
+            tagSql.append("LIMIT 5");
+
+            ResultSet tagRs = stmt.executeQuery(tagSql.toString());
+
+            while (tagRs.next()) {
+                ObjectNode tagNode = mapper.createObjectNode();
+
+                tagNode.put("tag", tagRs.getString("tag"));
+                tagNode.put("count", tagRs.getInt("tag_count"));
+
+                topTagsArray.add(tagNode);
+            }
+
+            tagRs.close();
+
+            result.set("topTags", topTagsArray);
+            
             response.getWriter().write(mapper.writeValueAsString(result));
 
             conn.close();

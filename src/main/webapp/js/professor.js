@@ -24,7 +24,8 @@ function loadProfessor() {
 
             showProfessorInfo(professor);
             showRatingBreakdown(professor);
-            showReviews(professor.reviews);
+            showTopTags(professor.topTags);
+			showReviews(professor.reviews);
         } else {
             document.getElementById("professor-name").innerHTML = "Professor not found";
         }
@@ -57,6 +58,26 @@ function showProfessorInfo(professor) {
         "--percent",
         professor.difficultyPercent
     );
+}
+
+
+function showTopTags(tags) {
+    var tagsList = document.getElementById("top-tags-list");
+
+    if (tags == null || tags.length == 0) {
+        tagsList.innerHTML = "<p>No tags yet.</p>";
+        return;
+    }
+
+    var html = "";
+
+    for (var i = 0; i < tags.length; i++) {
+        html += '<span class="prof-tag">';
+        html += tags[i].tag + " (" + tags[i].count + ")";
+        html += '</span>';
+    }
+
+    tagsList.innerHTML = html;
 }
 
 function showRatingBreakdown(professor) {
