@@ -63,9 +63,6 @@ public class DataStore {
     
     
     //OLD
-    public List<Department> getAllDepartments() {
-        return new ArrayList<>(departments.values());
-    }
 
     public Department getDepartment(String short_id) {
         return departments.get(short_id);
