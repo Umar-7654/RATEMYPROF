@@ -12,7 +12,7 @@ function loadProfessor() {
     }
 
     document.getElementById("write-review-button").onclick = function () {
-        window.location.href = "submitrating.html?id=" + professorId;
+        window.location.href = "submitrating.html?professorId=" + professorId;
     };
 
     var xhr = new XMLHttpRequest();
