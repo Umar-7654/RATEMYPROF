@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/department.css">
     <link rel="icon" type="image/png" href="img/graduation.png">
     <title>RateMyAUSProf — Departments</title>
@@ -16,16 +17,16 @@
                 <h1 id="navbar-title">RATE <span style="font-size: 1.2rem;">my</span> AUS PROF</h1>
             </a>
             <div id="login-area">
-                <a href="#" class="login-link">log in</a>
-                <a href="#" class="login-link">sign up</a>
-                <a href="admin.html" class="login-link" id="admin-dashboard-link">admin dashboard</a>
+                <a href="login.html" class="login-link">log in</a>
+                <a href="signup.html" class="login-link">sign up</a>
+                <a href="admin.html" id="admin-dashboard-link" class="login-link">Admin Dashboard</a>
             </div>
         </div>
     </nav>
 
-    <div id="dept-header" class="container-fluid">
+    <div id="dept-header">
         <div class="container py-4">
-            <h2 id="dept-name" class="text-center">All Departments</h2>
+            <h2 id="dept-name">All Departments</h2>
         </div>
     </div>
 
@@ -50,8 +51,8 @@
             </div>
         </div>
 
-        <div id="departments-container">
-            <p id="dept-loading" class="text-center py-4">Loading departments…</p>
+        <div id="dept-sections-container">
+            <p id="loading-message">Loading departments…</p>
         </div>
     </div>
 
