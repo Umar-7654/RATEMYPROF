@@ -103,7 +103,7 @@ public class ReviewServlet extends HttpServlet {
             stmt.close();
             conn.close();
 
-            response.sendRedirect("homepage.html");
+            response.sendRedirect("professor.html?id=" + professorId);
 
         } catch (SQLException e) {
             PrintWriter out = response.getWriter();
