@@ -5,9 +5,12 @@ html, body {
     overflow: hidden;
 }
 body {
-    height: 100vh;  /* relative to the viewport */
+    min-height: 100vh;
+    margin: 0;
     background-image: url("../img/aus-doors.png");
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 #background-overlay {
