@@ -40,9 +40,25 @@ function showProfessorInfo(professor) {
     document.getElementById("professor-affiliation").innerHTML =
         "Professor in the American University of Sharjah's " + professor.departmentName + " Department";
 
-    document.getElementById("biggest-rating").innerHTML =
-        professor.averageRating.toFixed(1) + ' <span id="out-of-rating">/5</span>';
-
+	var avg = Number(professor.averageRating);
+	
+	document.getElementById("biggest-rating").innerHTML =
+	avg.toFixed(1) + ' <span id="out-of-rating">/5</span>';
+	var ratingImage = "rating1.png";
+	if (avg >= 4.5) {
+	    ratingImage = "rating5.png";
+	} else if (avg >= 4.0) {
+	    ratingImage = "rating4.png";
+	} else if (avg >= 3.0) {
+	    ratingImage = "rating3.png";
+	} else if (avg >= 2.0) {
+	    ratingImage = "rating2.png";
+	} else {
+	    ratingImage = "rating1.png";
+	}
+	document.getElementById("rating-star").src = "img/" + ratingImage;
+		
+		
     document.querySelector("#professor-would-take .prof-stat-number").innerHTML =
         professor.wouldTakeAgainPercent + "%";
 
