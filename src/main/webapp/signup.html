@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/png" href="img/graduation.png">
+</head>
+<body>
+    <a href="homepage.html" id="home-logo">
+        <img src="img/graduation-blue.png" alt="RateMyAUSProf logo">
+    </a>
+<div id="background-overlay"></div>
+
+<div id="login-box">
+    <h1>SIGN UP</h1>
+
+    <form action="signup" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="firstName" placeholder="First Name" required>
+            </div>
+
+            <div class="col-md-6">
+                <input type="text" name="lastName" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="ausID" placeholder="AUS ID" required>
+            </div>
+
+            <div class="col-md-6">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+        </div>
+
+        <button type="submit" id="login-button" class="hey">SIGN UP</button>
+    </form>
+
+    <p id="signup-text">
+        <a href="login.html">Already have an account?</a>
+    </p>
+</div>
+
+</body>
+</html>

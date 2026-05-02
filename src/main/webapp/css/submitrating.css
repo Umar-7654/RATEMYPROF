@@ -1,0 +1,31 @@
+#star-rating { display: flex; flex-direction: column; gap: 8px; }
+#star-rating input { display: none; }
+#star-rating label { cursor: pointer; padding: 8px 16px; border: 1px solid #cabaa3; border-radius: 6px; color: #665e53; width: fit-content; }
+#star-rating input:checked + label { background-color: #cabaa3; color: white; font-weight: bold; }
+#star-rating label:hover { background-color: #fdf7ef; }
+body { background-color: #fdf7ef; }
+nav { background-color: #665e53; padding: 10px 20px; }
+.navbar-brand { color: #cabaa3; font-weight: bold; font-size: 1.3rem; }
+.navbar-brand:hover { color: #f7efe3; }
+.navbar-toggler { border-color: #cabaa3; }
+#rating-form-section { padding: 50px 0; }
+#form-title { font-weight: bold; color: #665e53; margin-bottom: 30px; font-size: 2rem; }
+.form-label { font-weight: bold; color: #665e53; }
+.form-select { border: 1px solid #cabaa3; background-color: white; color: #665e53; }
+.form-select:focus { border-color: #665e53; box-shadow: 0 0 0 0.2rem rgba(202, 186, 163, 0.4); }
+.form-control { border: 1px solid #cabaa3; }
+.form-control:focus { border-color: #665e53; box-shadow: 0 0 0 0.2rem rgba(202, 186, 163, 0.4); }
+.tag-checkbox { display: none; }
+.tag-label { padding: 6px 14px; border: 1px solid #cabaa3; border-radius: 20px; cursor: pointer; color: #665e53; background-color: white; font-size: 0.9rem; }
+.tag-label:hover { background-color: #fdf7ef; }
+.tag-checkbox:checked + .tag-label { background-color: #cabaa3; color: white; font-weight: bold; }
+#submit-btn { background-color: #665e53; color: white; border: none; padding: 12px 40px; font-size: 1.1rem; border-radius: 6px; cursor: pointer; }
+#submit-btn:hover { background-color: #cabaa3; color: white; }
+#main-footer { background-color: #665e53; color: white; padding: 40px 0 20px 0; }
+.footer-section h4 { margin-bottom: 15px; }
+.footer-section a { color: #cabaa3; text-decoration: none; }
+.footer-section a:hover { color: #f7efe3; }
+#footer-bottom { text-align: center; margin-top: 20px; font-size: 0.9rem; }
+#rating-form-section .col-lg-8 { background-color: white; padding: 40px; border-radius: 12px; border: 1px solid #cabaa3; margin-top: 40px; margin-bottom: 40px; }
+.login-link { color: #cabaa3 !important; }
+.login-link:hover { color: #f7efe3 !important; }

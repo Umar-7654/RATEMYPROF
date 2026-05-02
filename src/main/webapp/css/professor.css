@@ -1,0 +1,230 @@
+.section-box {
+    background-color: #fdf7ef;
+
+}
+
+#biggest-rating {
+    font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    padding: 0;
+    font-size: 7.0rem;
+    margin-bottom: 0;
+}
+
+#out-of-rating {
+    font-size: 2.2rem;
+    color: #7a6d5f;
+}
+
+.rating-star {
+   height: 1em; width: auto;
+}
+
+
+#professor-name {
+  font-family: "Belanosima", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+font-size: 4.0rem;
+margin-bottom: 0;
+}
+
+
+#professor-affiliation {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+
+    font-size: 1.2rem;
+    color: #5f564b;
+    margin-bottom: 20px;
+}
+
+
+#write-review-button{
+
+    background-color: #67111b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#write-review-button:hover {
+    background-color: #7a6d5f;
+}
+
+
+#rating-breakdown-title {
+    margin-top: 40px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.8rem;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.rating-category {
+
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+
+.rating-count {
+
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+.rating-bar {
+    flex: 1;
+    height: 38px;
+    background-color: #dddddd;
+    overflow: hidden;
+}
+
+.rating-fill {
+    height: 100%;
+    background-color: #67111b;
+}
+
+
+
+
+.prof-stat-box {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.gauge-wrap {
+    width: 180px;
+    margin: 0 auto 10px;
+}
+
+.prof-gauge-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gauge-bg,
+.gauge-fill {
+    fill: none;
+    stroke-width: 12;
+    stroke-linecap: round;
+}
+
+.gauge-bg {
+    stroke: #d8cec0;
+}
+
+.gauge-fill {
+    stroke: #7b0d1e;
+    stroke-dasharray: var(--percent) 100;
+}
+
+.prof-stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: -50px;
+    color: #000;
+}
+
+.prof-stat-label {
+
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: 1.2rem;
+    color: #000;
+}
+
+
+.review-box-title{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+.review-title{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.3rem;
+    border-bottom: solid 2px #7a6d5f;
+    margin-bottom: 10px;
+}
+
+.review-box {
+    width: 80px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    background-color: #7b0d1e;
+    color: white;
+}
+
+.review-card {
+    background-color: #f3f3f3;
+}
+.card {
+    border: none;
+
+}
+
+.card-title {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;}
+
+
+.review-labels{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+.review-text{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+    margin-top: 20px;
+}
+
+#professor-ratings{
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+
+nav { background-color: #665e53; padding: 10px 20px; }
+.navbar-brand { color: #cabaa3; font-weight: bold; font-size: 1.3rem; }
+.navbar-brand:hover { color: #f7efe3; }
+.navbar-toggler { border-color: #cabaa3; }

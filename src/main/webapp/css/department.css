@@ -1,0 +1,150 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #2c2620;
+    color: #f0ebe4;
+    cursor: url("../img/cursor1.png"), auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a {
+    cursor: url("../img/cursor2.png"), pointer;
+}
+#dept-navbar {
+    background-color: #3a3129;
+    padding: 14px 0;
+    border-bottom: 1px solid #cabaa3;
+}
+.navbar-brand-link {
+    text-decoration: none;
+}
+#navbar-title {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+#login-area a.login-link {
+    color: #cabaa3;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 10px;
+    transition: color 0.3s;
+}
+#login-area a.login-link:hover {
+    color: #f7efe3;
+}
+#dept-header {
+    background-color: #3a3129;
+    border-bottom: 3px solid #cabaa3;
+}
+#dept-name {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #f7efe3;
+    margin: 0;
+}
+.form-label {
+    color: #cabaa3;
+    font-weight: 600;
+}
+.form-select {
+    background-color: #3a3129;
+    color: #f0ebe4;
+    border: 1px solid #665e53;
+    cursor: url("../img/cursor2.png"), pointer;
+}
+.form-select:focus {
+    border-color: #cabaa3;
+    box-shadow: 0 0 0 0.2rem rgba(202, 186, 163, 0.25);
+    background-color: #3a3129;
+    color: #f0ebe4;
+}
+.table {
+    color: #f0ebe4;
+    border-color: #665e53;
+}
+.table thead th {
+    background-color: #3a3129;
+    color: #cabaa3;
+    border-bottom: 2px solid #cabaa3;
+    font-weight: 700;
+}
+.table tbody tr {
+    border-bottom: 1px solid #4a4139;
+}
+.table-hover tbody tr:hover {
+    background-color: rgba(202, 186, 163, 0.08);
+    color: #f0ebe4;
+}
+.rating-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+}
+.badge-green {
+    background-color: #2e7d32;
+}
+.badge-yellow {
+    background-color: #f9a825;
+    color: #333;
+}
+.badge-red {
+    background-color: #c62828;
+}
+.btn-view {
+    background-color: #cabaa3;
+    color: #2c2620;
+    font-weight: 600;
+    border: none;
+    cursor: url("../img/cursor2.png"), pointer;
+    transition: background-color 0.3s;
+}
+.btn-view:hover {
+    background-color: #f7efe3;
+    color: #2c2620;
+}
+.prof-card {
+    background-color: #3a3129;
+    border: 1px solid #665e53;
+    border-radius: 8px;
+}
+.prof-card h5 {
+    color: #f7efe3;
+}
+#main-footer {
+    background-color: #665e53;
+    color: white;
+    padding: 40px 0 20px 0;
+    margin-top: auto;
+}
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+.footer-section a {
+    color: #cabaa3;
+    text-decoration: none;
+    transition: color 1s;
+}
+.footer-section a:hover {
+    color: #f7efe3;
+}
+#footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+@media (max-width: 576px) {
+    #navbar-title {
+        font-size: 1.2rem;
+    }
+    #dept-name {
+        font-size: 1.6rem;
+    }
+}

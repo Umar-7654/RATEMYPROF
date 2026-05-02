@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="submitrating.css">
+  <link rel="icon" type="image/png" href="img/graduation.png">
+  <title>RateMyAUSProf — Submit Rating</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="homepage.html">RateMyAUSProf</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link login-link" href="#">log in</a></li>
+          <li class="nav-item"><a class="nav-link login-link" href="#">sign up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FORM -->
+  <div class="container" id="rating-form-section">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 col-12">
+        <h2 id="form-title">Submit a Rating</h2>
+
+        <!-- Course Code -->
+        <div class="mb-3">
+          <label class="form-label">Select Course Code *</label>
+          <select class="form-select" id="course-code">
+            <option value="">-- Select a course --</option>
+            <option>CMP 101</option>
+            <option>CMP 257</option>
+            <option>CMP 312</option>
+            <option>MTH 101</option>
+            <option>ENG 201</option>
+          </select>
+        </div>
+
+        <!-- Rating -->
+        <div class="mb-3">
+          <label class="form-label">Rate Your Professor *</label>
+          <div id="star-rating">
+            <input type="radio" name="rating" id="star5" value="5">
+            <label for="star5">5 stars</label>
+            <input type="radio" name="rating" id="star4" value="4">
+            <label for="star4">4 stars</label>
+            <input type="radio" name="rating" id="star3" value="3">
+            <label for="star3">3 stars</label>
+            <input type="radio" name="rating" id="star2" value="2">
+            <label for="star2">2 stars</label>
+            <input type="radio" name="rating" id="star1" value="1">
+            <label for="star1">1 star</label>
+          </div>
+        </div>
+
+        <!-- Difficulty -->
+        <div class="mb-3">
+          <label class="form-label">How Difficult Was This Professor? *</label>
+          <select class="form-select" id="difficulty">
+            <option value="">-- Select difficulty --</option>
+            <option>1 - Very Easy</option>
+            <option>2 - Easy</option>
+            <option>3 - Medium</option>
+            <option>4 - Hard</option>
+            <option>5 - Very Hard</option>
+          </select>
+        </div>
+
+        <!-- Take Again -->
+        <div class="mb-3">
+          <label class="form-label">Would You Take This Professor Again? *</label>
+          <div>
+            <input type="radio" name="take-again" id="yes-again" value="yes">
+            <label for="yes-again">Yes</label>
+            &nbsp;&nbsp;
+            <input type="radio" name="take-again" id="no-again" value="no">
+            <label for="no-again">No</label>
+          </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="mb-3">
+          <label class="form-label">Additional Info</label>
+          <div><input type="checkbox" id="for-credit"><label for="for-credit"> Was this class taken for credit?</label></div>
+          <div><input type="checkbox" id="textbook"><label for="textbook"> Did this professor use textbooks?</label></div>
+          <div><input type="checkbox" id="attendance"><label for="attendance"> Was attendance mandatory?</label></div>
+        </div>
+
+        <!-- Grade -->
+        <div class="mb-3">
+          <label class="form-label">Select Grade Received</label>
+          <select class="form-select" id="grade">
+            <option value="">-- Select grade --</option>
+            <option>A+</option><option>A</option><option>A-</option>
+            <option>B+</option><option>B</option><option>B-</option>
+            <option>C+</option><option>C</option><option>C-</option>
+            <option>D</option><option>F</option>
+          </select>
+        </div>
+
+        <!-- Tags -->
+        <div class="mb-3">
+          <label class="form-label">Select Up To 3 Tags</label>
+          <div id="tags-container" class="row g-2">
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag1"><label for="tag1" class="tag-label">Tough Grader</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag2"><label for="tag2" class="tag-label">Get Ready To Read</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag3"><label for="tag3" class="tag-label">Participation Matters</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag4"><label for="tag4" class="tag-label">Extra Credit</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag5"><label for="tag5" class="tag-label">Group Projects</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag6"><label for="tag6" class="tag-label">Amazing Lectures</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag7"><label for="tag7" class="tag-label">Clear Grading Criteria</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag8"><label for="tag8" class="tag-label">Gives Good Feedback</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag9"><label for="tag9" class="tag-label">Inspirational</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag10"><label for="tag10" class="tag-label">Lots Of Homework</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag11"><label for="tag11" class="tag-label">Hilarious</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag12"><label for="tag12" class="tag-label">Beware Of Pop Quizzes</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag13"><label for="tag13" class="tag-label">So Many Papers</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag14"><label for="tag14" class="tag-label">Caring</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag15"><label for="tag15" class="tag-label">Respected</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag16"><label for="tag16" class="tag-label">Lecture Heavy</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag17"><label for="tag17" class="tag-label">Test Heavy</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag18"><label for="tag18" class="tag-label">Graded By Few Things</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag19"><label for="tag19" class="tag-label">Accessible Outside Class</label></div>
+            <div class="col-auto"><input type="checkbox" class="tag-checkbox" id="tag20"><label for="tag20" class="tag-label">Online Savvy</label></div>
+          </div>
+        </div>
+
+        <!-- Review -->
+        <div class="mb-3">
+          <label class="form-label">Write a Review *</label>
+          <textarea class="form-control" id="review-text" rows="5" placeholder="Share your experience with this professor..."></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="mb-5 text-center">
+          <button type="button" id="submit-btn">Submit Rating</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 footer-section">
+          <h4>RateMyAUSProf</h4>
+          <p>Helping AUS students find and rate professors more easily.</p>
+        </div>
+        <div class="col-md-6 footer-section">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a><br>
+          <a href="#search-sections">Search</a><br>
+          <a href="#">Departments</a>
+        </div>
+      </div>
+      <hr>
+      <p id="footer-bottom">© 2026 RateMyAUSProf. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="submi.js"></script>
+</body>
+</html>
