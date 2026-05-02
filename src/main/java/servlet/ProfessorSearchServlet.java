@@ -2,12 +2,16 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
+import model.Professor;
+import service.DataStore;
 
 @WebServlet("/searchProfessor")
 public class ProfessorSearchServlet extends HttpServlet {
@@ -30,23 +34,12 @@ public class ProfessorSearchServlet extends HttpServlet {
 
         typedText = typedText.toLowerCase();
 
-        String[] professors = {
-            "Dana Dyghyam",
-            "Daniel Abbott",
-            "David Gray",
-            "Jonathan Davis",
-            "Darius Spieth"
-        };
+        List<Professor> professors = DataStore.getInstance().searchProfessorsByName(typedText);
 
-        int count = 0;
+        for (int i=0; i<professors.size(); i=i+1) {
+            Professor professor = professors.get(i);
 
-        for (int i=0; i<professors.length; i=i+1) {
-            String professorName = professors[i];
-
-            if (professorName.toLowerCase().startsWith(typedText) && count < 3) {
-                out.println(professorName);
-                count=count+1;
-            }
+            out.println(professor.getId() + "|" + professor.getName());
         }
     }
 
