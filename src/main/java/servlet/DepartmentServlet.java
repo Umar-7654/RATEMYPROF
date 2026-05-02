@@ -68,18 +68,20 @@ public class DepartmentServlet extends HttpServlet {
         try {
             Department incoming = mapper.readValue(req.getReader(), Department.class);
 
-            Department existing = store.getDepartment(incoming.getShort_id());
+            boolean updated = store.updateDepartment(
+                incoming.getShort_id(),
+                incoming.getName(),
+                incoming.getImage_path()
+            );
 
-            if (existing == null) {
+            if (!updated) {
                 resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
                 out.print(mapper.writeValueAsString(new ErrorResponse("Department not found")));
                 return;
             }
 
-            existing.setName(incoming.getName());
-            existing.setImage_path(incoming.getImage_path());
-
-            out.print(mapper.writeValueAsString(existing));
+            Department refreshed = store.getDepartment(incoming.getShort_id());
+            out.print(mapper.writeValueAsString(refreshed));
         } catch (Exception e) {
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             out.print(mapper.writeValueAsString(new ErrorResponse(e.getMessage())));
