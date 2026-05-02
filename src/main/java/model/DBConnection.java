@@ -8,8 +8,7 @@ public class DBConnection {
 
     private static final String URL = "jdbc:mysql://localhost:3306/ratemyausprof";
     private static final String USER = "root";
-    private static final String PASSWORD = "Kkyk9019";
-
+    private static final String PASSWORD = "NNFy@123123.";
     public static Connection getConnection() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
