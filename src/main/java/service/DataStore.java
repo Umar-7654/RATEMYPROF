@@ -294,4 +294,28 @@ public class DataStore {
 
         return false;
     }
+    public boolean updateDepartment(String short_id, String name, String image_path) {
+        try {
+            Connection conn = DBConnection.getConnection();
+
+            String sql = "UPDATE departments SET name = ?, image_path = ? WHERE short_id = ?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setString(1, name);
+            stmt.setString(2, image_path);
+            stmt.setString(3, short_id);
+
+            int rowsUpdated = stmt.executeUpdate();
+
+            stmt.close();
+            conn.close();
+
+            return rowsUpdated > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
 }

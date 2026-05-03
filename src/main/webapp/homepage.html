@@ -15,9 +15,8 @@
     <a href="#AUS_MainBuilding" id="home-logo">
         <img src="img/graduation.png" alt="RateMyAUSProf logo">
     </a>
-    <div class="container-fluid p-0"> <!--p-0 removes default padding so the image touches the edges.-->
+    <div class="container-fluid p-0">
         <div class="row">
-            <!-- AUS Main Building -->
             <div class="col-12" id="AUS_MainBuilding">
                 <div id="login-area">
                     <a href="login.html" class="login-link">log in</a>
@@ -33,9 +32,7 @@
         </div>
     </div>
 
-    <!-- search sections -->
     <div id="search-sections" class="container-fluid">
-        <!-- search by name -->
          <div class="row">
             <div class="col-12 section-box" id="name-section">
                 <div class="container py-5">
@@ -50,7 +47,6 @@
         </div>
     </div>
 
-        <!-- search by department -->
         <div class="row">
             <div class="col-12 section-box" id="department-section">
             <div class="container py-5">
@@ -58,31 +54,39 @@
                 <div class="row g-4">
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="department-card">
-                            <img src="img/aus-sba2.png" alt="SBA" class="img-fluid">
-                            <h3>SBA</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-3 col-md-6">
-                        <div class="department-card">
-                            <img src="img/aus-caad.jpeg" alt="CAAD" class="img-fluid">
-                            <h3>CAAD</h3>
-                        </div>
+                        <a href="department.html?dept=SBA" class="department-link">
+                            <div class="department-card">
+                                <img src="img/aus-sba2.png" alt="SBA" class="img-fluid">
+                                <h3>SBA</h3>
+                            </div>
+                        </a>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="department-card">
-                            <img src="img/aus-cen.jpeg" alt="CEN" class="img-fluid">
-                            <h3>CEN</h3>
-                        </div>
+                        <a href="department.html?dept=CAAD" class="department-link">
+                            <div class="department-card">
+                                <img src="img/aus-caad.jpeg" alt="CAAD" class="img-fluid">
+                                <h3>CAAD</h3>
+                            </div>
+                        </a>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="department-card">
-                            <img src="img/aus-lobby.jpg" alt="Other Departments" class="img-fluid">
-                            <h3>All Departments</h3>
-                        </div>
+                        <a href="department.html?dept=CEN" class="department-link">
+                            <div class="department-card">
+                                <img src="img/aus-cen.jpeg" alt="CEN" class="img-fluid">
+                                <h3>CEN</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <a href="department.html" class="department-link">
+                            <div class="department-card">
+                                <img src="img/aus-lobby.jpg" alt="All Departments" class="img-fluid">
+                                <h3>All Departments</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

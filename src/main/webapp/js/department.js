@@ -26,7 +26,7 @@ function ratingBadge(r) {
 function professorCard(prof) {
     return `
         <div class="prof-card-row">
-            <img src="img/default-prof.webp" alt="${prof.name}" class="prof-avatar">
+            <img src="img/default-prof.png" alt="${prof.name}" class="prof-avatar">
             <div class="prof-info">
                 <h5 class="prof-name">${prof.name}</h5>
                 <div class="prof-rating-row">
