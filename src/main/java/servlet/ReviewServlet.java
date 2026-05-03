@@ -100,6 +100,22 @@ public class ReviewServlet extends HttpServlet {
             stmt.setString(14, review.getReviewText());
 
             stmt.executeUpdate();
+            
+            String updateProfessorSql =
+            	    "UPDATE professors SET " +
+            	    "rating = (SELECT AVG(rating) FROM reviews WHERE professor_id = ?), " +
+            	    "reviews = (SELECT COUNT(*) FROM reviews WHERE professor_id = ?) " +
+            	    "WHERE id = ?";
+
+            PreparedStatement updateStmt = conn.prepareStatement(updateProfessorSql);
+
+            updateStmt.setString(1, professorId);
+            updateStmt.setString(2, professorId);
+            updateStmt.setString(3, professorId);
+
+            updateStmt.executeUpdate();
+            updateStmt.close();
+
             stmt.close();
             conn.close();
 
