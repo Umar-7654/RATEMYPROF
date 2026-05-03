@@ -53,7 +53,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("userType", userType);
 
                 if (userType.equals("admin")) {
-                    response.sendRedirect("admin.html");
+                    response.sendRedirect("admin-departments");
                 } else {
                     response.sendRedirect("homepage.html");
                 }

@@ -24,22 +24,17 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="homepage.html">RateMyAUSProf</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link login-link" href="login.html">log in</a></li>
-                    <li class="nav-item"><a class="nav-link login-link" href="signup.html">sign up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+	<nav id="global-navbar">
+	    <a href="homepage.html" id="global-logo">
+	        <img src="img/graduation.png" alt="RateMyAUSProf logo">
+	        <span>RateMyAUSProf</span>
+	    </a>
+	
+	    <div id="global-login-area">
+	        <a href="login.html" class="global-login-link">log in</a>
+	        <a href="signup.html" class="global-login-link">sign up</a>
+	    </div>
+	</nav>
 
     <section class="section-box" id="professor-summary-section">
 
@@ -169,7 +164,7 @@
             <p id="footer-bottom">© 2026 RateMyAUSProf. All rights reserved.</p>
         </div>
     </footer>
-
+	<script src="js/global.js"></script>
     <script src="js/professor.js"></script>
 
 </body>

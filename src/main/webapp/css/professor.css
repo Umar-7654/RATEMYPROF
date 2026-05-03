@@ -253,3 +253,10 @@ nav { background-color: #665e53; padding: 10px 20px; }
     font-family: "Be Vietnam Pro", sans-serif;
     font-size: 0.9rem;
 }
+
+#reviews-section.section-box {
+  border: none;
+}
+#professor-summary-section.section-box {
+  border: none;
+}

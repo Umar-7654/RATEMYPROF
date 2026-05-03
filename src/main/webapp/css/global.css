@@ -1,1 +1,151 @@
 
+#global-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 28px;
+    height: 76px;
+    z-index: 1000;
+
+    background-image: url("../img/navbar1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+#global-navbar.hide-navbar {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#global-navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.35);
+    opacity: 0.7;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+#global-navbar:hover::before {
+    opacity: 0.35;
+}
+
+#global-navbar * {
+    box-sizing: border-box;
+}
+
+#global-navbar a {
+    text-decoration: none;
+}
+
+#global-logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+
+    color: #cabaa3 !important;
+    text-decoration: none !important;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+
+    cursor: url("../img/cursor2.png"), pointer;
+}
+
+#global-logo img {
+    width: 42px !important;
+    max-width: 42px !important;
+    height: auto !important;
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+#global-logo span {
+    color: #cabaa3;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#global-login-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.global-login-link {
+    color: #cabaa3;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.5s;
+    cursor: url("../img/cursor2.png"), pointer;
+}
+
+.global-login-link:hover {
+    color: #f7efe3;
+}
+
+#initials-button {
+    background-color: transparent;
+    color: #cabaa3;
+    border: 2px solid #cabaa3;
+    border-radius: 50%;
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: url("../img/cursor2.png"), pointer;
+}
+
+#initials-button:hover {
+    color: #f7efe3;
+    border-color: #f7efe3;
+}
+
+#user-dropdown {
+    position: absolute;
+    right: 0;
+    top: 58px;
+
+    background-color: white;
+    min-width: 140px;
+
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    text-align: center;
+}
+
+#user-dropdown a {
+    display: block;
+    padding: 12px 18px;
+
+    color: #665e53;
+    text-decoration: none;
+    font-weight: bold;
+
+    cursor: url("../img/cursor2.png"), pointer;
+}
+
+#user-dropdown a:hover {
+    background-color: #cabaa3;
+    color: white;
+}
+
+body {
+    padding-top: 32px;
+}
