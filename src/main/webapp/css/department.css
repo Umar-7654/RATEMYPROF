@@ -229,33 +229,6 @@ a {
     padding: 30px;
 }
 
-#main-footer {
-    background-color: #665e53;
-    color: white;
-    padding: 40px 0 20px 0;
-    margin-top: auto;
-}
-
-.footer-section h4 {
-    margin-bottom: 15px;
-    font-family: "Belanosima", sans-serif;
-}
-
-.footer-section a {
-    color: #cabaa3;
-    text-decoration: none;
-    transition: color 1s;
-}
-
-.footer-section a:hover {
-    color: #f7efe3;
-}
-
-#footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
 
 @media (max-width: 576px) {
     #navbar-title {
