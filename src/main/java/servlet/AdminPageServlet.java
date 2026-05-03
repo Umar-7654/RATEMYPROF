@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet({"/admin-departments", "/admin-professors"})
+@WebServlet({"/admin-departments", "/admin-professors", "/admin-users", "/admin-reviews"})
 public class AdminPageServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -40,6 +40,10 @@ public class AdminPageServlet extends HttpServlet {
             filePath = "/WEB-INF/admin-departments.html";
         } else if (page.equals("/admin-professors")) {
             filePath = "/WEB-INF/admin-professors.html";
+        }else if (page.equals("/admin-users")) {
+            filePath = "/WEB-INF/admin-users.html";
+        } else if (page.equals("/admin-reviews")) {
+            filePath = "/WEB-INF/admin-reviews.html";
         }
 
         InputStream inputStream = getServletContext().getResourceAsStream(filePath);

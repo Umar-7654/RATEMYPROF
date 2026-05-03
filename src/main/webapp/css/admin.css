@@ -5,12 +5,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 78px;
 }
 a {
     cursor: url("../img/cursor2.png"), pointer;
 }
 #admin-nav {
-    background-color: #4a4139;
+rgb(192, 192, 192)    background-color: #4a4139;
     border-bottom: 2px solid #cabaa3;
     padding: 0;
 }
