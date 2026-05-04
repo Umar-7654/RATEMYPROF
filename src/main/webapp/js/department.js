@@ -4,40 +4,52 @@ const container = document.getElementById("dept-sections-container");
 
 let allDepartments = [];
 
-async function loadDepartments() {
-    try {
-        const response = await fetch("api/departments");
-        if (!response.ok) throw new Error("Server returned " + response.status);
-        allDepartments = await response.json();
-        render();
-        scrollToRequestedDept();
-    } catch (err) {
-        container.innerHTML = "<p class='error-message'>Could not load departments. Is the server running?</p>";
-    }
+function loadDepartments() {
+    fetch("api/departments")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("Server returned " + response.status);
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            allDepartments = data;
+            render();
+            scrollToRequestedDept();
+        })
+        .catch(function(err) {
+            container.innerHTML = "<p class='error-message'>Could not load departments. Is the server running?</p>";
+        });
 }
 
 function ratingBadge(r) {
-    let cls = "badge-red";
-    if (r >= 4) cls = "badge-green";
-    else if (r >= 3) cls = "badge-yellow";
-    return `<span class="rating-badge ${cls}">${r.toFixed(1)}</span>`;
+    var cls = "badge-red";
+
+    if (r >= 4) {
+        cls = "badge-green";
+    } else if (r >= 3) {
+        cls = "badge-yellow";
+    }
+
+    return '<span class="rating-badge ' + cls + '">' + Number(r).toFixed(1) + '</span>';
 }
 
 function professorCard(prof) {
-    return `
-        <div class="prof-card-row">
-            <img src="img/default-prof.png" alt="${prof.name}" class="prof-avatar">
-            <div class="prof-info">
-                <h5 class="prof-name">${prof.name}</h5>
-                <div class="prof-rating-row">
-                    ${ratingBadge(prof.rating)}
-                    <a href="professor.html?id=${prof.id}" class="btn btn-sm btn-view">View</a>
-                </div>
-            </div>
-        </div>
-    `;
-}
+    var html = "";
 
+    html += '<div class="prof-card-row">';
+    html += '<img src="img/default-prof.png" alt="' + prof.name + '" class="prof-avatar">';
+    html += '<div class="prof-info">';
+    html += '<h5 class="prof-name">' + prof.name + '</h5>';
+    html += '<div class="prof-rating-row">';
+    html += ratingBadge(prof.rating);
+    html += '<a href="professor.html?id=' + prof.id + '" class="btn btn-sm btn-view">View</a>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+
+    return html;
+}
 function applySortAndFilter(profs) {
     let data = profs.slice();
 
@@ -65,17 +77,16 @@ function render() {
             ? "<p class='no-profs'>No professors match the current filter.</p>"
             : profs.map(professorCard).join("");
 
-        return `
-            <section class="dept-section" id="dept-${dept.short_id}">
-                <div class="dept-banner">
-                    <img src="${dept.image_path}" alt="${dept.name}">
-                </div>
-                <h3 class="dept-section-title">${dept.name} (${dept.short_id})</h3>
-                <div class="prof-list">
-                    ${profsHtml}
-                </div>
-            </section>
-        `;
+			return '' +
+			    '<section class="dept-section" id="dept-' + dept.short_id + '">' +
+			        '<div class="dept-banner">' +
+			            '<img src="' + dept.image_path + '" alt="' + dept.name + '">' +
+			        '</div>' +
+			        '<h3 class="dept-section-title">' + dept.name + ' (' + dept.short_id + ')</h3>' +
+			        '<div class="prof-list">' +
+			            profsHtml +
+			        '</div>' +
+			    '</section>';
     }).join("");
 }
 

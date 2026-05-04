@@ -179,7 +179,6 @@ function showReviews(reviews) {
         html += '</div>';
 
         html += '<div class="col-lg-6 text-end">';
-        html += 'Helpful?';
         html += '</div>';
         html += '</div>';
 
